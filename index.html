@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html>
+  <head >
+    <meta charset="UTF-8">
+    <title>Gongga</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+      [v-cloak] {
+     display: none;
+	 }
+	 @font-face {
+		 font-family: PingFang-SC;
+		 src: url('fonts/PingFang-SC.ttf');
+	 }
+	 * {
+		 margin: 0;
+		 padding: 0;
+	 }
+	 body {
+		 background-color: #2E75B6;
+		 color: #fff
+	 }
+	 body {
+		 font-family:Arial, "PingFang-SC", "Microsoft Yahei", sans-serif;
+		 font-size: 13px;
+		 line-height: 1.4;
+	 }
+	 p, .row {
+		 margin: 0 0 .4em;
+	 }
+	 ul, ol {
+		 margin-bottom: 1em;
+		 margin-left: 1.5em;
+		 overflow: hidden;
+	 }
+	 a {
+		 color:#fff;
+		 text-decoration: none;
+	 }
+	 a:hover, a:focus {
+		 color:#fff;
+		 text-decoration: none;
+	 }
+	 .fl {
+		 display:inline-block;
+		 float: left;
+	 }
+	 .fr {
+		 display:inline-block;
+		 float: right;
+	 }
+	 .hide {
+		 display: none
+	 }
+	 .show {
+		 display: block
+	 }
+	 .modal {
+		 top:20%
+	 }
+	 .form-control {
+		 font-size: 12px;
+	 }
+	 .mt10 {
+		 margin-top: 10px;
+	 }
+	 .top {
+		 background: #1F4E79;
+		 padding: 20px 10px;
+		 height: 80px;
+		 line-height: 40px;
+	 }
+	 .c9 {
+		 color: #999;
+		 font-size: 10px;
+		 font-weight: normal;
+		 line-height: 24px;
+	 }
+	 .c9:hover {
+		 color: #999;
+	 }
+	 .cc3 {
+		 color: #333;
+		 font-weight: normal;
+		 line-height: 24px;
+	 }
+	 .cc3:hover {
+		 color: #333;
+	 }
+	 .c3 {
+		 color: #555;
+		 font-size: 13px;
+		 font-weight: normal;
+		 line-height: 22px;
+	 }
+	 .mr10 {
+		 margin-right: 10px;
+	 }
+	 .top img {
+		 height: 40px;
+		 margin-right: 10px;
+	 }
+	 .top b {
+		 font-size: 26px;
+		 font-weight: normal;
+	 }
+	 .top .ver {
+		 font-size: 12px;
+		 font-style: normal;
+	 }
+	 .top span {
+		 margin-right:5px;
+	 }
+	 .top .line {
+		 color: rgba(255, 255, 255, 0.2);
+	 }
+	 .top .help {
+		 background-color: #FB7945
+	 }
+	 .top .reset {
+		 background-color: #FF9600
+	 }
+	 .foot {
+		 line-height: 20px;
+		 margin: 0px 10px;
+		 font-size: 10px;
+	 }
+	 .box {
+		 background: #fff;
+		 border-radius: 5px;
+		 padding:10px 15px;
+	 }
+	 .warp {
+		 margin: 30px 10px;
+	 }
+	 .user_info {
+		 margin-bottom: 10px;
+		 overflow: hidden;
+		 padding: 20px;
+	 }
+	 .user_info .wt {
+		 float: left;
+		 width: 200px;
+	 }
+	 .user_add {
+		 height: 300px;
+	 }
+	 .col {
+		 width: 48%;
+		 margin: 0 1%;
+		 float: left;
+	 }
+	 .tit {
+		 color: #002C53;
+		 font-size: 14px;
+		 height: 23px;
+	 }
+	 .tit1 {
+		 color: #96A3B0;
+	 }
+	 .tit2 {
+		 color:#6D6D6D;
+		 font-size: 12px;
+	 }
+	 .tip {
+		 color:#FB7945;
+	 }
+	 .btn_next {
+		 background: #518DC3;
+		 color: #fff;
+	 }
+	 .btn_link {
+		 text-align: center;
+		 border: #97A5B4 1px solid;
+		 color: #8E9DAD;
+		 padding: 5px 40px 5px 10px;
+		 border-radius: 30px;
+		 position: relative;
+		 height: 35px;
+		 line-height: 25px;
+	 }
+	 .btn_link::before {
+		 content:"";
+		 background: url(img/arrow-b.png) right center no-repeat;
+		 width: 30px;
+		 height: 30px;
+		 position: absolute;
+		 top: 2px;
+		 right: 2px;
+	 }
+	 .btn_link:hover {
+		 color: #8E9DAD;
+	 }
+	 .btn_link_s {
+		 text-align: center;
+		 border: #97A5B4 1px solid;
+		 color: #8E9DAD;
+		 padding: 5px 40px 5px 10px;
+		 border-radius: 30px;
+		 position: relative;
+		 height: 26px;
+		 line-height: 16px;
+		 font-size: 10px
+	 }
+	 .btn_link_s::before {
+		 content:"";
+		 background: url(img/arrow-s.png) right center no-repeat;
+		 width: 20px;
+		 height: 20px;
+		 position: absolute;
+		 top: 2px;
+		 right: 2px;
+	 }
+	 .btn_link_s:hover {
+		 color: #8E9DAD;
+	 }
+	 .btn_down {
+		 text-align: center;
+		 background: #518DC3;
+		 color: #fff;
+		 padding: 5px 40px 5px 10px;
+		 border-radius: 30px;
+		 position: relative;
+		 height: 26px;
+		 font-size: 12px;
+	 }
+	 .btn_down::before {
+		 content:"";
+		 background: url(img/arrow.png) right center no-repeat;
+		 width: 20px;
+		 height: 20px;
+		 position: absolute;
+		 top: 2px;
+		 right: 4px;
+		 background-size: 20px;
+	 }
+	 .btn_down:hover {
+		 color: #fff;
+	 }
+	 .btn_down img {
+		 float: left;
+		 width:15px;
+	 }
+	 .main {
+		 overflow: hidden;
+		 margin: 10px 0px 0px 0px;
+	 }
+	 .left p, .left .row {
+		 margin: 0 0 .4em;
+	 }
+	 .w2 {
+		 width:60%;
+		 float:left;
+		 font-size: 12px
+	 }
+	 #token {
+		 color:#FF9600;
+		 font-size: 22px
+	 }
+	 .down-content {
+		 padding: 30px;
+	 }
+	 .lh {
+		 height: 20px;
+	 }
+	 .w9 {
+		 width: 95%;
+	 }
+	 .hline {
+		 border-bottom: #ccc 1px solid
+	 }
+	 u {
+		 cursor: pointer;
+	 }
+	 .hh {
+		 height: 450px;
+	 }
+	 .modal-dialog {
+		 width: 300px;
+		 margin: 10px auto;
+	 }
+    </style>
+    
+  </head>
+  <body>
+    <div id="app"  v-cloak>
+      <div class="top"  style="-webkit-app-region: drag">
+        <img src="img/logo.png" alt="" >
+        <b class="mr10" >{{$t("m.app_name")}}</b>
+        <i class="ver mr10">Ver{{ver}}</i>
+        <div class="fr" style="-webkit-app-region: no-drag;">
+        <span><a href="javascript:;" @click="lang('en')">{{$t("m.en")}}</a></span>
+        <span><i class="line">|</i></span>
+        <span><a href="javascript:;" @click="lang('zh')">{{$t("m.cn")}}</a></span>
+        <template v-if="account!=''">
+            <button type="button" class="btn  help mr10"  @click="help">{{$t("m.help")}}</button>
+            <button type="button" class="btn reset " @click="quit" >{{$t("m.botton[2]")}}</button>
+      </template>
+    </div>
+      </div>
+      <template v-if="account==''">
+      <div class="warp init">
+         <div class="box user_info">
+            <div class="wt">
+              <p class="tit">{{$t("m.user[0]")}}</p>
+              <p class="tit1">{{$t("m.user[2]")}}</p>
+            </div>
+            <div class="wt">
+                <p class="tit">{{$t("m.user[1]")}}</p>
+                <p class="tit1">{{$t("m.user[2]")}}</p>
+              </div>
+         </div>
+         <div class="box user_add">
+              <div class="col">
+                <p class="tit"  v-html='$t("m.create[0]")'> </p>
+                <p><input type="password" class="form-control" v-model="pwd" :placeholder="$t('m.input[0]')"></p>
+                <p><input type="password" class="form-control" v-model="repwd" :placeholder="$t('m.input[1]')"></p>
+                <p class="tip">{{$t("m.create[1]")}}</p>
+              </div>
+              <div class="col">
+                <p class="tit">{{$t('m.opt')}} </p>
+                <p class="tit1">{{$t('m.rec[0]')}} {{$t('m.rec[2]')}}</p>
+                <p><input type="number" class="form-control" v-model="rec" :placeholder="$t('m.rec[1]')"    > </p>
+                <p class="tit1">{{$t('m.peer_name[0]')}}  {{$t('m.peer_name[2]')}}</p>
+                <p><input type="text" class="form-control" v-model="peer_name" :placeholder="$t('m.peer_name[1]')"    ></p>
+                <p class="text-right"><button type="button" class="btn btn_next" @click="add_account"  :disabled="add_loading" >{{$t("m.botton[0]")}}</button></p>              
+              </div>
+         </div>
+
+      </div>
+      </template>
+      <template v-if="account!=''">
+        <div class="main">
+          <div class="col box left hh">
+              <p class="tit">{{$t("m.lable[0]")}}  <span id="nodeid" class="tit1">{{nodeid}}</span></p>
+              <div class="row ">
+                <div class="col">
+                  <span class="tit">{{$t("m.user[0]")}}</span><br>
+                  <span class="tit1">{{user.numbers}}</span>
+                </div>
+                <div class="col">
+                  <span class="tit">{{$t("m.user[1]")}}</span><br>
+                  <span class="tit1">{{user.name}}</span>
+                </div>
+         
+              </div>
+              <div class="row hline">
+                <p class="tit">{{$t("m.lable[5]")}}</p>
+                <p class="tit1"><span id="account">{{account}}</span></p>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p class="tit">{{$t("m.lable[1]")}}</p>
+                  <p class="tit1"><template v-if="status==1">
+                      <span id="status">{{$t("m.status["+status+"]")}}</span>
+                      <img src="img/run.gif"  id="status_ico" width="15" alt="">
+                  </template>  
+                  <template v-if="status==0">
+                    <img src="img/no.gif" id="status_ico"  alt="">
+    
+                  </template></p>
+
+                </div>
+                <div class="col">
+                  <p class="tit">{{$t("m.lable[2]")}}</p>
+                  <p class="tit1"><span id="block">{{block}}</span></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p class="tit">{{$t("m.lable[3]")}}</p>
+                  <p class="tit1"><span id="startTime">{{upTime}}</span></p>
+                </div>
+                <div class="col">
+                    <p class="tit">{{$t("m.lable[9]")}}</p>
+                    <p class="tit1"><span id="startTime">{{stime}}</span></p>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col">
+                     <p> </p>
+                  </div>
+                  <div class="col ">
+                      <p class="tit">{{$t("m.referees[0]")}}
+                        <span class="c3">
+                          <template v-if="referee==''">
+                            <a @click="referee_set()" class="cc3">{{$t("m.referees[1]")}}</a>
+                        </template>
+                        <template v-else>
+                          {{referee}}
+                        </template>
+                        </span>
+                      </p>
+
+                  </div>
+              </div> 
+              <div class="row hline"  >
+                <div class="tit1 " v-html='$t("m.lable[6]")' @click="view"></div>
+              </div>  
+              <div class="row ">
+                  <div class="tit " style="height:26px">{{$t("m.referees[2]")}} <a  @click="go_to('http://scan.gga.cloud/referrer.html?address='+account)"  class="btn btn_link_s fr">{{$t("m.referees[5]")}}</a></div>
+                  <p class="c3">
+                    <span>{{$t("m.referees[3]")}}:{{counts}}</span>&nbsp;&nbsp;&nbsp;<span>{{$t("m.referees[4]")}}:<b class="tip">{{sum}}</b></span>
+                  </p>
+              </div>
+              </div>    
+        <div class="col ">
+            <div class="box">
+              <p class="tit">{{$t("m.lable[4]")}}</p>
+              <p>
+                  <span id="token">{{token}} <i v-if="is_syn==0" class="c9">({{$t("m.is_syn")}})</i></span>
+                  
+                  <a  @click="exchange"  class="btn btn_down fr">{{$t("m.exchange")}}</a>
+              </p>
+              </div>
+            <div class="box mt10">
+              <p class="tit">{{$t("m.botton[1]")}}   <a  @click="go_to('http://www.gga.cloud/account/index.php?a='+account)"  class="btn btn_link_s fr">{{$t("m.list")}}</a> </p>
+              <p><input type="text" class="form-control account" v-model="tx.address" @blur="check_addres" :placeholder="$t('m.tx[0]')"  ></p>
+              <p class="tit1 lh"><template v-if="g_account!=''">
+                   Gongga Account: {{g_account}} Name:{{g_name}} 
+                 </template></p>
+                 <p><input type="number" class="form-control"  v-model="tx.val" min=0    :placeholder="$t('m.tx[1]')"></p>
+                 <p><input type="password" class="form-control" v-model="tx.pwd"  :placeholder="$t('m.tx[2]')"></p>
+                 <p class="text-right">
+                    <a class=" fl" v-if="i18n.locale!='en'" @click="go_to('http://info.gongga.org/txhelp/')" >
+                      <span class="c3">{{$t('m.tx[3]')}}</span></a> 
+                    <button type="button" class="btn btn-primary" @click="transferFrom">{{$t("m.botton[3]")}}</button>
+                    <button type="button" class="btn btn-default" @click="cancel" ><span style="color:#333">{{$t("m.botton[4]")}}</span></button>
+                 </p>
+            </div>
+            <div class="box mt10">
+              <p class="tit">{{$t("m.app[0]")}}:    </p>
+              <div class="row">
+                <div class="col">
+                  <a class="btn btn_down w9" id="ios"  data-toggle="modal" data-target=".modal-ios">{{$t("m.app[2]")}}</a>
+                  <a class="btn btn_down  mt10 w9"    @click="go_to('http://forum.gga.cloud')" >{{$t("m.botton[6]")}}</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn_link_s w9" @click="get_keystory">{{$t("m.app[1]")}}</a>
+                    <a class="btn btn_link_s  mt10 w9" @click="save">{{$t('m.save')}}</a>
+                </div>
+              </div>
+
+          </div>
+       
+    </div>
+      </template>
+
+
+       
+      <div class=" foot text-right">
+          <a href="javascript:;" class="fl " @click="reset">{{$t("m.reset_btn")}}</a>
+          Email: support@gongga.org &nbsp;&nbsp;&nbsp;&nbsp;
+          Gongga 2018 @All Rights Reserved 
+           Ver{{ver}} 
+      </div>
+ 
+ 
+  
+  <div class="modal fade  modal-ios" tabindex="-1" role="dialog"  >
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content text-center down-content">
+            <p></p>
+          <img src="http://www.gga.cloud/images/down.png" alt="" width="180">
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade  modal-andirod" tabindex="-1" role="dialog"  >
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content text-center down-content">
+          <p></p>
+          <img src="http://www.gga.cloud/images/down.png" alt="" width="180">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade  modal-keystore" tabindex="-1" role="dialog"  >
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content text-center down-content">
+            <p style="color:#333">{{$t("m.app[4]")}}</p>
+            <div class="key_code"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="rules" tabindex="-1" role="dialog"  >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                     
+                  </div>
+              <div class="modal-body">
+                <template v-if="is_loading==0">
+                  <p class="text-center">
+                      <img src="img/loading.gif" alt=""  width="100">
+                  </p>
+                    
+                </template>
+                <template>
+
+                </template v-if="is_loading">
+                  <p class="c3">
+                    {{msg}}
+                  </p>
+                     
+              </div>
+ 
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="rec" tabindex="-1" role="dialog"  >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+               <table width="100%">
+                 <tr>
+                   <td><input type="text" class="form-control" v-model="set_ref"   :placeholder="$t('m.referees[6]')"></td>
+                 </tr>
+               </table>        
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" @click="referee_do">{{$t("m.botton[5]")}}</button>
+                <button type="button" class="btn btn-primary"  data-dismiss="modal">{{$t("m.botton[4]")}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  </div>
+
+
+
+<script>
+
+const fs = require("fs");
+const {ipcRenderer} = require('electron')
+const {shell} = require('electron')
+var appDataPath=ipcRenderer.sendSync('appDataPath');
+var Os=ipcRenderer.sendSync('getOs');
+const { exec } = require('child_process');
+var gga="";
+var python="";
+
+function geth(){
+  let cmd=__dirname+'/exe/win/geth.exe --datadir %APPDATA%/GonggaPeer/gongga  --networkid 10088  --rpc  --rpcaddr localhost --rpcport 8545 --rpcapi "web3,eth,db,net,personal,miner,admin,txpool" --rpccorsdomain "*"    --syncmode "full" console  '
+  if(Os=="darwin"){
+     cmd=__dirname+'/exe/mac/geth --datadir ~/"Library/Application Support/GonggaPeer/gongga"  --networkid 10088  --rpc  --rpcaddr localhost --rpcport 8545 --rpcapi "web3,eth,db,net,personal,miner,admin,txpool" --rpccorsdomain "*"    --syncmode "full" console'
+  } 
+
+ if(gga==''){
+  gga=exec(cmd,{cwd:__dirname}, (err, stdout, stderr) => {
+       
+    if (err) {
+      console.log('exit：'+err.code);
+      return;
+    }
+    console.log(stdout);
+  });
+ 
+}
+if(gga.killed || gga.exitCode){
+        gga="";
+  }
+}
+function pyweb3(){
+  let cmd=__dirname+'/exe/win/Python37/python.exe '+__dirname+'/exe/node.py';
+  if(Os=="darwin"){
+    cmd=__dirname+'/exe/mac/Python37/bin/python3 '+__dirname+'/exe/node.py';
+  } 
+
+  python=exec(cmd,{cwd:__dirname},(err, stdout, stderr) => {
+    if (err) {
+
+      if(err.code){
+        vm.help();
+        vm.quit();
+      }
+      return;
+    }
+    console.log(stdout); 
+  });
+}
+
+geth();
+pyweb3();
+var Web3 = require('web3');
+var web3 = new Web3();
+
+web3.setProvider(new Web3.providers.HttpProvider("http://localhost:8545"));
+</script>
+
+  <script src="js/jquery-2.1.0.min.js"></script>
+  
+  <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
+  <script src="js/jquery.qrcode.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/vue-i18n.js"></script>
+  <script src="js/i18n.js"></script>
+
+    <script>
+    
+      
+    Date.prototype.Format = function (fmt) {  
+    var o = {
+        "M+": this.getMonth() + 1, 
+        "d+": this.getDate(), 
+        "h+": this.getHours(), 
+        "m+": this.getMinutes(), 
+        "s+": this.getSeconds(), 
+        "q+": Math.floor((this.getMonth() + 3) / 3),  
+        "S": this.getMilliseconds()  
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+    }
+
+    var startTime=new Date().Format("yyyy-MM-dd hh:mm:ss");
+    var stime="";
+    var lang="";
+if(fs.existsSync(appDataPath+'lang')){
+    lang = (fs.readFileSync(appDataPath+'lang').toString()!='')?fs.readFileSync(appDataPath+'lang').toString():"zh";
+}else{
+  lang = "zh"
+  fs.writeFile(appDataPath+'lang', 'zh',  function(err) {
+    if (err) {
+        return console.error(err);
+    }
+  });
+}
+
+if(fs.existsSync(appDataPath+'stime')){
+  stime = (fs.readFileSync(appDataPath+'stime').toString()!='')?fs.readFileSync(appDataPath+'stime').toString():"";
+}
+else{
+  stime =startTime;
+  fs.writeFile(appDataPath+'stime', startTime,  function(err) {
+    if (err) {
+        return console.error(err);
+    }
+  });
+}
+
+    </script>
+
+<script>
+
+  var t="";
+  var jsonInterface = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"INITIAL_SUPPLY","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_subtractedValue","type":"uint256"}],"name":"decreaseApproval","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_addedValue","type":"uint256"}],"name":"increaseApproval","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"}];
+  var c_address = '0x1c56dff0f0c2c7f5a6d5f952cbac6b95753bedfc';
+  var vm = new Vue({
+    el: '#app',
+    i18n: i18n,
+    data: {
+      pwd:"",
+      repwd:"",
+      rec:"",
+      account:"",
+      nodeid:"",
+      _nodeid:"",
+      block:"",
+      status:0,
+      upTime:startTime,
+      stime:stime,
+      peer_name:'',
+      token:0,
+      msg:"",
+      is_loading:0,
+      user:{
+        name:"",
+        numbers:"",
+      },
+      tx:{
+        address:"",
+        val:"",
+        pwd:"",
+      },
+      g_account:"",
+      g_name:"",
+      ver:"2.0",
+      keystore:"",
+      is_syn:0,
+      sblock:0,
+      referee:"",
+      counts:0,
+      sum:0,
+      set_ref:'',
+      add_loading:false
+    
+
+    },
+    mounted: function () {
+    this.$nextTick(function () {
+ 
+    })
+    },
+    watch: {
+      'tx.val': function (val) {
+       if (val<0){
+         this.tx.val=0;
+       }
+    }
+    },
+    methods: {
+      help:function(){
+        var _lang=i18n.locale
+        url="http://info.gongga.org/peer_help_cn/";
+        if(_lang=="en"){
+          url="http://info.gongga.org/peer_help_en/"
+        }
+        this.go_to(url);
+
+      },
+      exchange:function(){
+        var _lang=i18n.locale
+        url="http://info.gongga.org/ggaexchange-cn/";
+        if(_lang=="en"){
+          url="http://info.gongga.org/ggaexchange/"
+        }
+        this.go_to(url);
+      },
+      cancel:function(){
+        this.g_account='';
+        this.g_name='';
+        this.tx.address='';
+        this.tx.val='';
+        this.tx.pwd='';
+      },
+      check_addres:function(){
+        _this=this;
+        this.tx.address=this.tx.address.trim()
+        if(this.tx.address.indexOf('0x')==-1 && this.tx.address!='' ){
+           $.ajax({
+             url:"https://wallet.edc.org.cn/api/getPrivateAddress/"+_this.tx.address,
+             success:function(res){
+               if(res.code==200 && res.data!='' ){
+                  _this.g_account=_this.tx.address;
+                  _this.g_name=res.data.name;
+                  _this.tx.address=res.data.private_address;
+                 
+               }
+               else  {
+                _this.g_account='';
+                _this.g_name='';
+                _this.tx.address='';
+               }
+             }
+           })
+        }
+        else{
+          _this.g_account='';
+          _this.g_name='';
+        }
+      },
+      get_news:function(){
+        var _this=this;
+         var _lang=i18n.locale;
+         _this.msg='';
+
+         _this.is_loading=0;
+         $.ajax({
+           url:"https://wallet.edc.org.cn/api/get_news",
+           type:"post",
+           data:{"client_id":_this._nodeid,"numbers":_this.user.numbers},
+           success:function(res){
+             if(res.code==200){
+          
+              _this.msg=res.data[_lang];
+              _this.is_loading=1;
+              $('#rules').modal('show');
+              _this.news_read(res.data.id,_this._nodeid,_this.user.numbers);
+             }
+
+           }
+
+         })
+      },
+      get_ref:function(){
+  
+        var _this=this;
+        if(this.user.numbers!=""){
+          $.ajax({
+           url:"https://wallet.edc.org.cn/api/apiGetReferee",
+           type:"post",
+           data:{"numbers":_this.user.numbers},
+           success:function(res){
+             if(res.code==200){
+              _this.referee=res.data['referee'];
+              _this.counts=res.data['counts'];
+              _this.sum=new Number(res.data['sum']).toFixed(2);
+             
+             }
+
+           }
+
+         })
+        }
+         
+      },
+      news_read:function(id,client_id,numbers){
+        $.ajax({
+           url:"https://wallet.edc.org.cn/api/news_read",
+           type:"post",
+           data:{"news_id":id,"client_id":client_id,"numbers":numbers},
+           success:function(res){
+           }
+
+         })
+      },
+      referee_set:function(){
+        $('#rec').modal('show');
+      },
+      referee_do:function(){
+        var url="https://wallet.edc.org.cn/api/modifyreferrer";
+        var _this=this
+        var _lang=i18n.locale
+        $.ajax({
+           url:url,
+           type:"post",
+           data:{"node_sign":_this._nodeid,"to_numbers":_this.set_ref,"numbers":_this.user.numbers},
+           success:function(res){
+            $('#rec').modal('hide');
+             if(res.code==200){
+              _this.referee=_this.set_ref;
+              _this.set_ref='';
+              return false
+             }
+             if(res.code==201){
+              if(_lang=="en"){
+                alert(res.en)
+              }else{
+                alert(res.msg)
+              }
+              
+              
+              return false
+             }
+             alert(m.msg);
+             
+           }
+
+         })
+
+      },
+      view:function(){
+
+         var _lang=i18n.locale
+        url="http://info.gongga.org/rules_cn/";
+        if(_lang=="en"){
+          url="http://info.gongga.org/rules_en/"
+        }
+        this.go_to(url);
+
+        
+      },
+      save:function(){
+
+        ipcRenderer.send('save-key')
+      },
+      transferFrom:function(){
+        var metacoin = new web3.eth.Contract(jsonInterface, c_address);
+        var address = this.tx.address;
+        var val = this.tx.val;
+        var _from = this.account;
+        var _pwd = this.tx.pwd;
+        var _this=this;
+
+        if (address == "") {
+          
+          alert(i18n.t("m.msg_info.tx[0]"))
+          return false;
+
+        }
+        if (val == "") {
+          alert(i18n.t("m.msg_info.tx[1]"))
+          return false;
+
+        }
+        if (_from == "") {
+          alert(i18n.t("m.msg_info.tx[2]"))
+          return false;
+
+        }
+
+
+        if (_pwd == "") {
+          alert(i18n.t("m.msg_info.tx[3]"))
+          return false;
+
+        }
+        if(val>this.token){
+          alert(i18n.t("m.msg_info.tx[4]"))
+          return false;
+        }
+        
+        web3.eth.personal.unlockAccount(_from, _pwd).then(
+          function (result) {
+            
+            if (result) {
+              
+              var dec = 6;
+              var balance = Math.pow(10, dec);
+              metacoin.methods.transfer(address, balance * val).send({
+                  from: _from
+                }).on('transactionHash', function (hash) {
+                  
+                  _this.tx.address="";
+                  _this.tx.val="";
+                  _this.tx.pwd="";
+                  $('#tx').modal('hide')
+                  let tip=i18n.t("m.tx_msg")+" \n TxHash: "+hash
+                  ipcRenderer.send('open-transferFrom-dialog',tip);
+
+                })
+                .on('confirmation', function (confirmationNumber, receipt) {
+                   
+
+                })
+                .on('receipt', function (receipt) {
+                  // receipt example
+                   
+
+                })
+                .on('error',function(e){
+                  console.log(e)
+                  ipcRenderer.send('open-error-dialog',e)
+                });
+
+            } else {
+              ipcRenderer.send('open-error-dialog',i18n.t("m.msg_info.transferFrom[0]"))
+              
+            }
+          },function(e){
+            console.log(e)
+            ipcRenderer.send('open-error-dialog',i18n.t("m.msg_info.transferFrom[1]"))
+         
+    }) 
+      },
+      quit:function(){
+        exit()
+        ipcRenderer.sendSync('quit')
+      },
+      get_keystory:function(){
+        var _this=this;
+        var path_key=appDataPath+"gongga/keystore/";
+        var keystore="";
+        fs.readdir(path_key,function(err, files){
+                if (err) {
+                    alert(err)
+                }
+                var _account=_this.account.replace("0x",'').toLowerCase();
+                var key_file="";
+                for (x in files){
+                  if(files[x].indexOf(_account)>-1){
+                    key_file=files[x]
+                    break;
+                  }
+                }
+                keystore=fs.readFileSync(path_key+files[0]).toString();
+               
+               $(".key_code").html('').qrcode({correctLevel:1,width:240,height:240,text:'http://www.gga.cloud/downapp.html?keystore='+keystore});
+               $('.modal-keystore').modal('show');
+        });
+      },
+      bindRegister:function(){
+        var num="";
+        var keystore="";
+        var peer_name="";
+        var _this=this;
+        var path_key=appDataPath+"gongga/keystore/";
+        var key_file="";
+        var _account=this.account.replace("0x",'').toLowerCase();
+        if(this.peer_name!="" && this.peer_name.length<=12){
+          peer_name=this.peer_name;
+        }else{
+          for(var i=0;i<4;i++){
+            num+=Math.floor(Math.random()*10)
+          }
+          peer_name=  "Peer"+num;
+        }
+          
+          fs.readdir(path_key,function(err, files){
+                if (err) {
+                    alert(err)
+                }
+                
+                for (x in files){
+                  if(files[x].indexOf(_account)>-1){
+                    key_file=files[x];
+                    break;
+                  }
+                }
+                keystore=fs.readFileSync(path_key+key_file).toString();  
+    
+                $.ajax({
+                  type: "POST",
+                  url:"https://wallet.edc.org.cn/api/bindRegister",
+                  data:{"name":peer_name,"keystore":keystore,referee:_this.rec,node_sign:_this._nodeid},
+                  success:function(res){
+                     if(res.code==200){
+                      _this.user.name= res.data.name 
+                      _this.user.numbers= res.data.numbers 
+                      _this.get_ref(); 
+                      fs.writeFile(appDataPath+'guser', JSON.stringify(_this.user),  function(err) {
+                          if (err) {
+                              return console.error(err);
+                          }
+                        });
+
+ 
+                     }
+                      
+                  }
+                });
+        });
+        
+
+      },
+      getBalance:function(){
+        var _this=this;
+
+        var metacoin = new web3.eth.Contract(jsonInterface, c_address);
+        var address = this.account;
+        var balance = 0;
+
+        var dec = 6;
+
+        metacoin.methods.balanceOf(address).call(function (error, result) {
+          if(result!=undefined){
+            var balance = result / Math.pow(10, dec);
+          _this.token=balance;
+          }
+          
+        
+        });
+      },
+      go_to:function(url){
+        shell.openExternal(url)
+      },
+      get_block:function(){
+        var _this=this;
+            web3.eth.net.getPeerCount().then(function(e){
+            console.log(e)
+            if(e>0){
+              _this.status=1;
+              
+              
+            }
+            else{
+              _this.status=0;
+              _this.is_syn=0;
+            }
+          },function(e){
+            _this.status=0;
+            _this.is_syn=0;
+              geth();
+            
+          });
+          web3.eth.getBlockNumber()
+        .then(function (r) {
+          _this.block=r;
+          if(_this.block>=_this.sblock){
+            _this.getBalance();
+            _this.is_syn=1;
+          }
+        
+        },function(e){
+        });
+
+      },
+      add_account:function(pwd){
+        var pwd=this.pwd;
+        var repwd=this.repwd;
+        if(pwd!=repwd){
+           alert(i18n.t("m.msg_info.pwd"));
+           return false;
+        }
+  
+          var _this=this;
+          _this.add_loading=true;
+          _this.msg= i18n.t("m.add_loading");
+          _this.is_loading=1;
+          $('#rules').modal('show');
+          web3.eth.personal.newAccount(pwd)
+          .then(function(e){
+            if(e){
+              _this.add_loading=false;
+              _this.msg="";
+              _this.is_loading=0;
+              $('#rules').modal('hide');
+              _this.account=e;
+              $.ajax({
+                url:"http://n.gongga.org/api/get_gas?a="+e,
+              });
+              fs.writeFile(appDataPath+'account', e,  function(err) {
+                  if (err) {
+                      return console.error(err);
+                  }
+                
+                });
+              _this.bindRegister();
+             
+            }
+          });
+       },
+       get_user:function(){
+        if(fs.existsSync(appDataPath+'guser')){
+          
+          guser = fs.readFileSync(appDataPath+'guser').toString()
+          
+          if(guser!=""){
+            var user = JSON.parse(guser)
+            this.user.name=user.name;
+            this.user.numbers=user.numbers;
+            this.get_ref();
+          }
+          
+        }else{
+          var num="";
+        var keystore="";
+        var _this=this;
+        var path_key=appDataPath+"gongga/keystore/";
+        var key_file="";
+        var _account=this.account.replace("0x",'').toLowerCase();
+          for(var i=0;i<4;i++){
+            num+=Math.floor(Math.random()*10)
+          }
+          fs.readdir(path_key,function(err, files){
+                if (err) {
+                    alert(err)
+                }
+                if(files.length==0){
+                  return false;
+                }
+                for (x in files){
+                  if(files[x].indexOf(_account)>-1){
+                    
+                    key_file=files[x];
+                    break;
+                  }
+                }
+
+                keystore=fs.readFileSync(path_key+key_file).toString();  
+                 
+                $.ajax({
+                  type: "POST",
+                  url:"https://wallet.edc.org.cn/api/isKeyStore",
+                  data:{"keystore":keystore},
+                  success:function(res){
+                    
+                     if(res.code==200){
+                      _this.user.name= res.data.name
+                      _this.user.numbers= res.data.numbers  
+                      _this.get_ref();
+                      fs.writeFile(appDataPath+'guser', JSON.stringify(_this.user),  function(err) {
+                          if (err) {
+                              return console.error(err);
+                          }
+                        });
+                     }
+                     if(res.code==201){
+                      _this.bindRegister();
+                     }
+                      
+                  }
+                });
+            });
+        
+          
+        }
+       },
+       get_nodeid:function(){
+        if(fs.existsSync(appDataPath+'nodeid')){
+          
+          nodeid = fs.readFileSync(appDataPath+'nodeid').toString()
+          
+          if(nodeid!=""){
+            this.nodeid=nodeid.substring(0,10)+"..."+nodeid.substring((nodeid.length-10),nodeid.length);
+            this._nodeid=nodeid;
+            clearInterval(t)
+          }
+          
+          }
+       },
+       get_account:function(){
+
+        if(fs.existsSync(appDataPath+'account')){
+          
+          account = fs.readFileSync(appDataPath+'account').toString();
+          this.account=account;
+          
+          this.init();
+          }else{
+
+          }
+       },
+       lang:function(lang){
+          i18n.locale = lang;
+           
+          
+          fs.writeFile(appDataPath+'lang', lang,  function(err) {
+            if (err) {
+                return console.error(err);
+            }
+          });
+       },
+       get_node:function(){
+         $.ajax({
+           url:"http://n.gongga.org/api/get_node_info",
+           success:function(res){
+                 
+                 if(res !=undefined && res.length>0){
+                  fs.writeFile(appDataPath+'gongga/geth/static-nodes.json', JSON.stringify(res) ,  function(err) {
+                  if (err) {
+                      return console.error(err);
+                  }
+                
+                });
+                 }
+               
+            }
+         })
+         var _this=this;
+         $.ajax({
+           url:"https://wallet.edc.org.cn/api/blockdetails",
+           success:function(res){
+                 
+                 if(res !=undefined  ){
+                   _this.sblock= res.data.number;
+                 }
+               
+            }
+         })
+       },
+      init:function(){
+        var _this=this;
+        setInterval(this.get_block,3000);
+        
+        setInterval(this.get_news,60*60*1000);
+        setInterval(this.get_ref,60*60*1000);
+        
+     
+        t=setInterval(this.get_nodeid,3000);
+      },
+       show_dialog:function(){
+         
+        $('#rec').modal('show')
+       },
+       check_up:function(){
+         var _this=this;
+         
+         $.ajax({
+           url:"https://wallet.edc.org.cn/api/versions/3",
+           success:function(res){
+             if(res.code=200 && parseFloat(_this.ver) < parseFloat(res.data)){
+            var arg={}
+             
+             arg.msg=i18n.t("m.up.msg");
+             arg.yes=i18n.t("m.up.yes");
+             arg.no=i18n.t("m.up.no");
+             arg.upgrade=res.upgrade;
+             arg.url=res.url;
+             ipcRenderer.send('open-up-dialog',arg)
+             }
+           }
+
+
+         });
+       },
+      reset:function(){
+        var arg={}
+             
+             arg.msg=i18n.t("m.reset");
+             arg.yes=i18n.t("m.up.yes");
+             arg.no=i18n.t("m.up.no");
+             ipcRenderer.send('open-reset-dialog',arg)
+      }
+   
+    },
+    created: function () {
+       
+      this.get_account();
+      this.get_node();
+      this.get_user();
+      this.init();
+      this.check_up();
+      
+  
+    }
+
+  })
+  ipcRenderer.on('saved', (event, path) => {
+    var path_key=appDataPath+"gongga/keystore/";
+    var _i18n=i18n
+    
+  
+    if (!path) {
+      alert(_i18n.t('m.msg_info.save[0]'))
+    }else{
+      
+          fs.readdir(path_key,function(err, files){
+            var _account =vm.account.replace("0x",'').toLowerCase();
+                if (err) {
+                    alert(err)
+
+                }
+                var key_file="";
+                for (x in files){
+                  if(files[x].indexOf(_account)>-1){
+                    key_file=files[x]
+                    break;
+                  }
+                }
+                fs.writeFile(path+'/'+key_file,  fs.readFileSync(path_key+key_file),  function(err) {
+                  alert(_i18n.t('m.msg_info.save[1]'))
+                
+        
+        });
+      });
+     
+    }
+     
+  })
+  
+  ipcRenderer.on("app_exit", (event, index) => {
+    exit();
+  })
+  function exit(){
+    gga.stdin.write('exit\n'); 
+    gga="";
+    python.kill();
+    python="";
+  }
+
+  ipcRenderer.on('reset-dialog-selection', (event, index) => {
+    
+  if (index === 1)
+  {
+    //delkey
+    var path_key=appDataPath+"gongga/keystore/";
+    var _i18n=i18n
+     
+  
+          fs.readdir(path_key,function(err, files){
+                if (err) {
+                    alert(err)
+
+                }
+                for (x in files){
+                  fs.unlinkSync(path_key+'/'+files[x]);
+                }
+                try {
+                   //clear 
+                   fs.writeFile(appDataPath+'account', '',  function(err) {
+                          if (err) {
+                              return console.error(err);
+                          }
+                          vm.pwd="";
+                          vm.repwd="";
+                          vm.account='';
+                          vm.add_loading=false;
+                        });
+                    fs.writeFile(appDataPath+'guser', '',  function(err) {
+                      if (err) {
+                          return console.error(err);
+                      }
+                    });
+                  
+                } catch (err) {
+                  alert(err)
+                }
+      });
+
+  } 
+})
+ 
+</script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "Gongga",
+  "version": "2.0.0",
+  "description": "The Gongga blockchain welcomes global computer enthusiasts to participate in the decentralized bookkeeping, and any computer can be the data node of the Gongga platform. Install and run the Gongga Data Node client and start running to get the GGA Token reward. If you have a PC or server, you can download and run the Gongga Peer program and become one of the global data nodes of the Gongga blockchain.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimshanghai/GonggaClient.git"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=img/gongga.ico",
+    "package:win64": "electron-packager . --overwrite --platform=win32 --arch=x64 --out=out --icon=img/gongga.ico",
+    "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out --icon=img/gongga.icns"
+  },
+  "keywords": [
+    "Gongga"
+  ],
+  "author": "jdai@yesed.com",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "~2.0.8"
+  },
+  "dependencies": {
+    "electron-packager": "^12.1.1",
+    "log4js": "^3.0.5",
+    "shelljs": "^0.8.2",
+    "typedarray-to-buffer": "^3.1.5",
+    "vue": "^2.5.17",
+    "web3": "^1.0.0-beta.36"
+  }
+}
